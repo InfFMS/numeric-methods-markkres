@@ -1,4 +1,6 @@
 import math
+import matplotlib.pyplot as plt
+import numpy as np
 def y1(x):
     return math.sin(2*x)+1
 def y2(x):
@@ -14,3 +16,10 @@ while i<=b:
     i+=0.001
 print(S)
     
+x=np.linspace(0,math.pi,300)
+Y1=[y1(X) for X in x]
+plt.plot(x,Y1)
+Y2=[y2(X) for X in x]
+plt.plot(x,Y2)
+plt.fill_between(x,Y1,Y2)
+plt.show()
