@@ -9,7 +9,7 @@ n1,n2=map(float,input().split())
 a1,b1=map(int,input().split())
 a2,b2=map(int,input().split())
 def f(x):
-    return ((b1**2+(a1-x)**2)*n1+(b2**2+(a2+x)**2)*n2)**0.5
+    return ((b1**2+(a1-x)**2)*n1+(b2**2+(a2-x)**2)*n2)**0.5
 L, R=min(a1,a2), max(a1,a2)
 tochnost=1e-6
 while R-L>tochnost:
